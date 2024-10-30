@@ -156,16 +156,16 @@ curl -X POST \
 ## Website Testing
 
 ### Test response time
-curl -w "\nTime: %{time_total}s\n" -o /dev/null -s https://example.com
+- `curl -w "\nTime: %{time_total}s\n" -o /dev/null -s https://example.com`
 
 
 ### Check HTTP/2 support
-curl -I --http2 https://example.com
+- `curl -I --http2 https://example.com`
 
 
 ### Test different IP versions
-curl -4 https://example.com  # IPv4 only
-curl -6 https://example.com  # IPv6 only
+- `curl -4 https://example.com  # IPv4 only`
+- `curl -6 https://example.com  # IPv6 only`
 
 
 ### Load testing
@@ -189,19 +189,19 @@ curl -b cookies.txt \
 
 
 ### Full verbose output with timing
-curl -v -w "\nTime: %{time_total}s\n" https://example.com
+- `curl -v -w "\nTime: %{time_total}s\n" https://example.com`
 
 
 ### Check redirect chain
-curl -L -I https://example.com
+- `curl -L -I https://example.com`
 
 
 ### Test specific SSL version
-curl --tlsv1.2 https://example.com
+- `curl --tlsv1.2 https://example.com`
 
 
 ### Certificate information
-curl -vI --cert-status https://example.com
+- `curl -vI --cert-status https://example.com`
 
 ## DNS debugging
 ```
