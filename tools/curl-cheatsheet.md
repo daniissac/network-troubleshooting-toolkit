@@ -115,34 +115,39 @@
 ### API Testing
 
 # GET request with auth and JSON response
+```
 curl -H "Authorization: Bearer token123" \
      -H "Accept: application/json" \
      https://api.example.com/data
-
+```
 # POST JSON data
+```
 curl -X POST \
      -H "Content-Type: application/json" \
      -d '{"name":"John","age":30}' \
      https://api.example.com/users
-
+```
 # File upload with form data
+```
 curl -F "file=@document.pdf" \
      -F "description=My File" \
      https://api.example.com/upload
-
+```
 # GraphQL query
+```
 curl -X POST \
      -H "Content-Type: application/json" \
      -d '{"query": "{ users { id name } }"}' \
      https://api.example.com/graphql
-
+```
 # OAuth2 token request
+```
 curl -X POST \
      -d "grant_type=client_credentials" \
      -d "client_id=id123" \
      -d "client_secret=secret123" \
      https://auth.example.com/token
-
+```
 
 ## Website Testing
 
@@ -157,18 +162,20 @@ curl -4 https://example.com  # IPv4 only
 curl -6 https://example.com  # IPv6 only
 
 # Load testing
+```
 curl -w "@format.txt" \
      -o /dev/null -s \
      -H "Connection: keep-alive" \
      --keepalive-time 60 \
      https://example.com
-
+```
 # Cookie handling
+```
 curl -b cookies.txt \
      -c cookies.txt \
      -L \
      https://example.com/login
-
+```
 
 ## Debugging
 
@@ -185,20 +192,24 @@ curl --tlsv1.2 https://example.com
 curl -vI --cert-status https://example.com
 
 # DNS debugging
+```
 curl --dns-servers 8.8.8.8 \
      --dns-ipv4-addr 1.2.3.4 \
      --trace dns.txt \
      https://example.com
-
+```
 
 ## Performance Testing
 
 # Download speed test
+```
 curl -o /dev/null \
      -w "Speed: %{speed_download} bytes/sec\n" \
      https://example.com/largefile
+```
 
 # Connection timing details
+```
 curl -w "\
     namelookup: %{time_namelookup}s\n \
     connect: %{time_connect}s\n \
@@ -207,11 +218,12 @@ curl -w "\
     starttransfer: %{time_starttransfer}s\n \
     total: %{time_total}s\n" \
     -o /dev/null -s https://example.com
-
+```
 # HTTP/2 multiplexing test
+```
 curl --http2 \
      --parallel \
      --parallel-max 10 \
      -w "HTTP Version: %{http_version}\n" \
      https://example.com/resource{1..10}
-
+```
