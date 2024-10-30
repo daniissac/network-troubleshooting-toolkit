@@ -2,24 +2,6 @@
 
 A comprehensive collection of network troubleshooting tools, commands, and best practices for developers and network engineers. This toolkit provides ready-to-use commands and guides for effective network debugging and diagnostics.
 
-## Directory Structure
-
-
-README.md
-
-└── tools/
-    │── ping-cheatsheet.md
-    │── traceroute-cheatsheet.md
-    │── dig-cheatsheet.md
-    │── nmap-cheatsheet.md
-    │── netstat-cheatsheet.md
-    │── tcpdump-cheatsheet.md
-    │── wireshark-cheatsheet.md
-    │── curl-cheatsheet.md
-    │── ssh-cheatsheet.md
-└── logs/
-    └── logs-cheatsheet.md
-
 
 ## Tool Categories
 1. **Basic Connectivity**
