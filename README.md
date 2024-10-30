@@ -5,19 +5,18 @@ A comprehensive collection of network troubleshooting tools, commands, and best 
 ## Directory Structure
 
 
-
 README.md
-network-troubleshooting/
-├── tools/
-│   ├── ping-cheatsheet.md
-│   ├── traceroute-cheatsheet.md
-│   ├── dig-cheatsheet.md
-│   ├── nmap-cheatsheet.md
-│   ├── netstat-cheatsheet.md
-│   ├── tcpdump-cheatsheet.md
-│   ├── wireshark-cheatsheet.md
-│   ├── curl-cheatsheet.md
-│   └── ssh-cheatsheet.md
+
+└── tools/
+    │── ping-cheatsheet.md
+    │── traceroute-cheatsheet.md
+    │── dig-cheatsheet.md
+    │── nmap-cheatsheet.md
+    │── netstat-cheatsheet.md
+    │── tcpdump-cheatsheet.md
+    │── wireshark-cheatsheet.md
+    │── curl-cheatsheet.md
+    │── ssh-cheatsheet.md
 └── logs/
     └── logs-cheatsheet.md
 
