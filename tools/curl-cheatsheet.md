@@ -114,33 +114,37 @@
 ## Common Use Cases
 ### API Testing
 
-# GET request with auth and JSON response
+#### GET request with auth and JSON response
 ```
 curl -H "Authorization: Bearer token123" \
      -H "Accept: application/json" \
      https://api.example.com/data
 ```
-# POST JSON data
+
+#### POST JSON data
 ```
 curl -X POST \
      -H "Content-Type: application/json" \
      -d '{"name":"John","age":30}' \
      https://api.example.com/users
 ```
-# File upload with form data
+
+#### File upload with form data
 ```
 curl -F "file=@document.pdf" \
      -F "description=My File" \
      https://api.example.com/upload
 ```
-# GraphQL query
+
+#### GraphQL query
 ```
 curl -X POST \
      -H "Content-Type: application/json" \
      -d '{"query": "{ users { id name } }"}' \
      https://api.example.com/graphql
 ```
-# OAuth2 token request
+
+#### OAuth2 token request
 ```
 curl -X POST \
      -d "grant_type=client_credentials" \
@@ -151,17 +155,20 @@ curl -X POST \
 
 ## Website Testing
 
-# Test response time
+### Test response time
 curl -w "\nTime: %{time_total}s\n" -o /dev/null -s https://example.com
 
-# Check HTTP/2 support
+
+### Check HTTP/2 support
 curl -I --http2 https://example.com
 
-# Test different IP versions
+
+### Test different IP versions
 curl -4 https://example.com  # IPv4 only
 curl -6 https://example.com  # IPv6 only
 
-# Load testing
+
+### Load testing
 ```
 curl -w "@format.txt" \
      -o /dev/null -s \
@@ -169,7 +176,8 @@ curl -w "@format.txt" \
      --keepalive-time 60 \
      https://example.com
 ```
-# Cookie handling
+
+### Cookie handling
 ```
 curl -b cookies.txt \
      -c cookies.txt \
@@ -179,19 +187,23 @@ curl -b cookies.txt \
 
 ## Debugging
 
-# Full verbose output with timing
+
+### Full verbose output with timing
 curl -v -w "\nTime: %{time_total}s\n" https://example.com
 
-# Check redirect chain
+
+### Check redirect chain
 curl -L -I https://example.com
 
-# Test specific SSL version
+
+### Test specific SSL version
 curl --tlsv1.2 https://example.com
 
-# Certificate information
+
+### Certificate information
 curl -vI --cert-status https://example.com
 
-# DNS debugging
+## DNS debugging
 ```
 curl --dns-servers 8.8.8.8 \
      --dns-ipv4-addr 1.2.3.4 \
@@ -201,14 +213,16 @@ curl --dns-servers 8.8.8.8 \
 
 ## Performance Testing
 
-# Download speed test
+
+### Download speed test
 ```
 curl -o /dev/null \
      -w "Speed: %{speed_download} bytes/sec\n" \
      https://example.com/largefile
 ```
 
-# Connection timing details
+
+### Connection timing details
 ```
 curl -w "\
     namelookup: %{time_namelookup}s\n \
@@ -219,7 +233,8 @@ curl -w "\
     total: %{time_total}s\n" \
     -o /dev/null -s https://example.com
 ```
-# HTTP/2 multiplexing test
+
+### HTTP/2 multiplexing test
 ```
 curl --http2 \
      --parallel \
